@@ -57,13 +57,34 @@
                         "content":"Infomacion de la aplicacion"
                     },
                     "list":[
-                        "asdaoisjdijaiosjdjajsiodjiojasiojdiojsajdijosajido",
-                        "ahusdhuihasuhidhuasdhuiahsuidhuhaushudihiusahduas",
-                        "asdyhiuahsudhiuashuidhiuhasuidahisudhiuashidhuiashdi",
-                        "asuhduihauhidhuahusidhuaishuidhiusahdhiahudihuas",
-                        "hausidhuiahushduiashudhuiahsidhiahushdiuasdasdasd",
-                        "uahsuidhaiushudhahsudhuiahsudhuahsiudhuuhsahdihaisduh",
-                        "aijsdjiaosjdijioasjdiasojdojaioj"
+                        {
+                            "title":"Version"
+                        },
+                        {
+                            "subtitle":"0.0.1"
+                        },
+                        "aplicacion realizada con Nodejs a partir de un a libreria que agiliza la creacion de sitios estaticos",
+                        {
+                            "list":{
+                                "title":"Heramientas utilizadas para la creacion de la pagina",
+                                "list":[
+                                    "VScode 1.44.2",
+                                    "Svelte",
+                                    "powerpoint"
+                                ],
+                                "footer":""
+                            }
+                        },{
+                            "link":{
+                                "title":"Paginas utilizadas en la creacion de la pagina estatica",
+                                "list":[
+                                    "https://www.vectorizer.io/",
+                                    "https://www.remove.bg/",
+                                    "https://news.google.com/news/rss",
+                                    "https://flow.microsoft.com/"
+                                ]
+                            }
+                        }
                     ]
                 }
             },
