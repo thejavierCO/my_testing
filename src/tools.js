@@ -1,19 +1,9 @@
-class sw{
-    constructor(require,serviceWorker){
-        let {getfile,getkeys,sw} = this.getMethods();
-        this.require = require;
-        this.data = [];
-        if(require||serviceWorker){
-            if(require){
-                getfile(require).then(async e=>getkeys(e).map(async e=>{
-                    let data = await e;data = await data.json();this.data.push(data);
-                }))
-            }
-            if(serviceWorker){
-                sw(serviceWorker,true)
-            }
-        }
-
+class tools{
+    constructor(){
+        this.require = [
+            "require",
+            "serviceWorker"
+        ];
     }
     getMethods(){
         return {
@@ -41,21 +31,10 @@ class sw{
                 }catch(e){
                     console.warn([e],a);
                 }
-            }
-        }
-    }
-    getData(f,t=1000){
-        let {gettype} = this.getMethods();
-        if(gettype(f)==="function"){
-            let i = 0;
-            let time = setInterval(()=>{i++;
-                if(this.require.length==this.data.length){
-                    f(this.data,true,this.getMethods());clearInterval(time);
-                }else if(i>=t){
-                    f(this.data,false,this.getMethods());clearInterval(time);
-                }
-            })
+            },
+            createTag:(a)=>document.createElement(a),
+            w:(a)=>console.warn(a)
         }
     }
 }
-export default sw;
+export default tools;
