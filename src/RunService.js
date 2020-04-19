@@ -38,7 +38,9 @@ class sw{
             },
             gettype:(a)=>{
                 try{return typeof a==="object"?a.length?"list":"key":typeof a;
-                }catch(e){console.warn(e);}
+                }catch(e){
+                    console.warn(e);
+                }
             }
         }
     }
