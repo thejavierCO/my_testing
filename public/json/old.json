@@ -1,0 +1,301 @@
+{
+    "btn":{
+        "sintomas":{
+            "base":{
+                "name":"SINTOMAS DEL COVID-19",
+                "icon":"icons/icon1.svg"
+            },
+            "data":{
+                "body":{
+                    "Sintomas del covid-19":{
+                        "body":{
+                            "Estadisticas":{
+                                "body":[
+                                    "El COVID-19 se caracteriza por síntomas leves, como, dolor de garganta, tos y fiebre. La enfermedad puede ser más grave en algunas personas y provocar neumonía o dificultades respiratorias.","Más raramente puede ser mortal. Las personas de edad avanzada y las personas con otras afecciones médicas (como asma, diabetes o cardiopatías) pueden ser más vulnerables y enfermar de gravedad."
+                                ],
+                                "type":"text"
+                            },
+                            "Los signos y síntomas pueden ser:":{
+                                "body":[
+                                    "dolor de garganta",
+                                    "tos",
+                                    "fiebre",
+                                    "dificultad para respirar (en casos graves)"
+                                ],
+                                "footer":"Actualmente no existe vacuna para prevenir la COVID-19.",
+                                "type":"list"
+                            },
+                            "Puede reducir el riesgo de infección:":{
+                                "body":[
+                                    "Lavándose las manos regularmente con agua y jabón o con desinfectante de manos a base de alcohol",
+                                    "Cubriéndose la nariz y la boca al toser y estornudar con un pañuelo de papel desechable o con la parte interna del codo",
+                                    "Evitando el contacto directo (1 metro o 3 pies) con cualquier persona con síntomas de resfriado o gripe (influenza)"
+                                ],
+                                "footer":"No existe ningún medicamento para prevenir o tratar la COVID-19. Algunos pacientes pueden necesitar tratamiento sintomático que les ayude a respirar.",
+                                "type":"list"
+                            },
+                            "Cuidado personal":{
+                                "body":{
+                                    "Si presenta síntomas leves, quédese en casa hasta recuperarse. Puede aliviar sus síntomas:":{
+                                        "body":[
+                                            "descansando y durmiendo",
+                                            "manteniéndose caliente",
+                                            "bebiendo muchos líquidos",
+                                            "utilizando humidificadores o tomando duchas calientes para aliviar el dolor de garganta y la tos"
+                                        ],"type":"list"
+                                    }
+                                },"type":"text"
+                            },
+                            "Tratamientos médicos":{
+                                "body":[
+                                    "Si presenta fiebre, tos y dificultad para respirar, busque inmediatamente atención médica. Llame con antelación a su proveedor de atención de salud e indíquele si recientemente ha o estado en contacto con personas que hayan viajado",
+                                    {"Link de paginas de noticias sobre el coronavirus":{
+                                            "body":[
+                                                "https://clustersalud.americaeconomia.com/gestion-hospitalaria/omo-se-trata-un-paciente-con-coronavirus-en-un-centro-de-salud",
+                                                "https://www.google.com/amp/s/amp.milenio.com/ciencia-y-salud/coronavirus-sintomas-inflamacion-en-ninos-asintomaticos",
+                                                "https://www.google.com/amp/s/cnnespanol.cnn.com/2020/04/09/alergias-y-coronavirus-lo-que-debes-hacer-para-proteger-tus-pulmones/amp/",
+                                                "https://www.google.com/amp/s/www.elimparcial.com/amp/",
+                                                "https://www.google.com/amp/s/www.elimparcial.com/amp/mexicali/mexicali/Sintomas-de-Covid-19-en-bebes-20200410-0017.html",
+                                                "https://www.google.com/amp/s/heraldodemexico.com.mx/estados/coronavirus-jalisco-centro-comercial-panico-casos-sintomas/",
+                                                "https://www.google.com/amp/s/www.multimedios.com/television/sin-sintomas-la-mayoria-de-los-contagiados-por-coronavirus%3famp",
+                                                "https://www.google.com/amp/s/amp.milenio.com/internacional/coronavirus-rechazan-mayores-edad-hospitales-madrid"
+                                            ],"type":["list","link"]
+                                    },"Link de la pagina de la OMS":{
+                                            "body":[
+                                                "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports",
+                                                "https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/advice-for-public/q-a-coronaviruses",
+                                                "https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/technical-guidance"
+                                            ],"type":["list","link"]
+                                        }
+                                    }
+                                ],"type":"text"
+                            }
+                        },"type":"text"
+                    }
+                },
+                "type":"info"
+            }
+        },
+        "info_oficial":{
+            "base":{
+                "name":"INFORMACION OFICIAL",
+                "icon":"icons/icon2.svg"
+            },
+            "data":{
+                "name":"noticias",
+                "type":"component"
+            }
+        },
+        "comunicar":{
+            "base":{
+                "name":"COMUNICADOS",
+                "icon":"icons/icon3.svg"
+            },
+            "data":{
+                "body":[
+                    "./img/1.jpeg",
+                    "./img/2.jpeg",
+                    "./img/3.jpeg",
+                    "./img/4.jpeg",
+                    "./img/5.jpeg"
+                ],
+                "type":"image"
+            }
+        },
+        "atencion":{
+            "base":{
+                "name":"CENTROS DE ATENCION",
+                "icon":"icons/icon4.svg"
+            },
+            "data":{
+                "body":{
+                    "Los Telefonos de asesoria COVID-19":{
+                        "body":{
+                            "Aguascalientes":{"Telefonos":["449 910 7900 Ext. 7133"]},
+                            "Baja California":{
+                                "Telefonos":[
+                                "686 304 8048",
+                                "664 108 2528",
+                                "646 239 0955",
+                                "646 947 5408"
+                            ]},
+                            "Baja California Sur":{
+                                "Telefonos":[
+                                "612 199 5386",
+                                "624 228 6855"
+                            ]},
+                            "Campeche":{
+                                "Telefonos":[
+                                "911"
+                            ]},
+                            "Coachuila":{
+                                "Telefonos":[
+                                "911"
+                            ]},
+                            "Colima":{
+                                "Telefonos":[
+                                "800 337 2583",
+                                "800 DE SALUD"
+                            ]},
+                            "Chiapas":{
+                                "Telefonos":[
+                                "800 772 2020",
+                                "961 607 7674"
+                            ]},
+                            "Chihuahua":{
+                                "Telefonos":[
+                                "614 4293 300 Ext. 10004",
+                                "911"
+                            ]},
+                            "Cuidad de Mexico":{"Telefonos":["555 658 1111"]},
+                            "Durango":{"Telefonos":[
+                                "618 137 7306",
+                                "618 325 1573",
+                                "618 134 7042"
+                            ]},
+                            "Guanajuato":{"Telefonos":[
+                                "800 627 2583",
+                                "911"
+                            ]},
+                            "Guerrero":{"Telefonos":["747 47 118 63"]},
+                            "Hidalgo":{"Telefonos":["771 719 4500"]},
+                            "Jalisco":{"Telefonos":["333 823 3220"]},
+                            "Estado de México":{"Telefonos":["800 900 3200"]},
+                            "Michoacán":{"Telefonos":["800 123 2890"]},
+                            "Morelos":{"Telefonos":["777 314  3336"]},
+                            "Nayarit":{
+                                "Telefonos":[
+                                "311 217 9556",
+                                "911"
+                            ]},
+                            "Nuevo Leon":{
+                                "Telefonos":[
+                                "818 361 0058",
+                                "070",
+                                "911"
+                            ]},
+                            "Oaxaca":{
+                                "Telefonos":[
+                                "951 516 1220",
+                                "951 516 8242"
+                            ]},
+                            "Puebla":{"Telefonos":[
+                                "800 420 5782",
+                                "911"
+                            ]},
+                            "Querétaro":{"Telefonos":["800 004 480"]},
+                            "Quintana Roo":{"Telefonos":["800 832 9198"]},
+                            "San Luis Potosí":{"Telefonos":["800 123 8888"]},
+                            "Sinaloa":{"Telefonos":["667 713 0063"]},
+                            "Sonora":{"Telefonos":["662 216 2759"]},
+                            "Tabasco":{"Telefonos":["800 624 1774"]},
+                            "Tamaulipas":{
+                                "Telefonos":[
+                                "834 318 6320",
+                                "834 318 6321"
+                            ]},
+                            "Veracruz":{"Telefonos":["800 123 456"]},
+                            "Yucatán":{
+                                "Telefonos":[
+                                "999 9303 050 Ext. 45042",
+                                "911"]},
+                            "Zacatecas":{
+                                "Telefonos":[
+                                "800 YO SALUD"
+                            ]},
+                            "Tlaxcala":{
+                                "Telefonos":[
+                                "551 944 2500 Ext. 891 29 401",
+                                "551 944 2500 Ext. 891 29 408",
+                                "911"
+                            ]}
+                        },
+                        "type":["list","phone"]
+                    },
+                    "Cuerpo de Bomberos":{
+                        "body":{
+                            "Telefonos":[
+                                "(81) 8342-0053",
+                                "(81) 8342-0054",
+                                "(81) 8342-0055"
+                            ]
+                        },
+                        "type":["list","phone"]
+                    },
+                    "Ambulancias":{
+                        "body":{
+                            "Cruz Roja":{
+                                "Telefonos":[
+                                    "065",
+                                    "(81) 1233-0600"
+                                ]
+                            },"Cruz Verde":{
+                                "Telefonos":[
+                                    "(81) 8371-5050"
+                                ]
+                            }
+                        },
+                        "type":["list","phone"]
+                    },
+                    "Clinicas y hospitales":{
+                        "body":{
+                            "Centros de Informacion Toxicologica":{
+                                "Telefonos":[	
+                                    "(81) 8348-6936",
+                                    "(81) 8348-6883"
+                                ]
+                            },
+                            "Hospital Metropolitano":{
+                                "Telefonos":[
+                                    "(81) 8305-5900",
+                                    "(81) 8305-5901",
+                                    "(81) 8305-5902",
+                                    "(81) 8305-5903",
+                                    "(81) 8305-5904"
+                                ]
+                            },
+                            "Hospital Universitario Dr. José Eleuterio González":{
+                                "Telefonos":[
+                                    "(81) 8389-1111"
+                                ]
+                            },
+                            "Hospital de Zona Traumatología y Ortopedia No. 21 IMSS":{
+                                "Telefonos":[
+                                    "(81) 8150-3190"
+                                ]
+                            }
+                        },
+                        "type":["list","phone"]
+                    }
+                },
+                "type":"info"
+            }
+        },
+        "about":{
+            "base":{
+                "name":"MENU"
+            },
+            "data":{
+                "body":{
+                    "version":"0.0.1",
+                    "about":"jaosijdiojasiojdiojaiosjd"
+                },
+                "type":"info"
+            }
+        }
+    },
+    "footer":{
+        "correo":[
+            {
+                "name":"Correo para Atencion al cliente",
+                "url":"mailto:",
+                "correo":"ATENCIONCOVIDAPP@EXAMPLE.COM"
+            },
+            {
+                "name":"Soporte y actualizacion de la app",
+                "url":"mailto:",
+                "correo":"COVID@EJEMEPLO.GOB.MX"
+            }
+        ]
+    }
+}

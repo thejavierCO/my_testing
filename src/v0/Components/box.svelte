@@ -1,0 +1,3 @@
+<center>
+    <slot></slot>
+</center>

@@ -1,0 +1,466 @@
+{
+    "document":{
+        "title":"Preventi-App",
+        "styles":[
+            "./global.css",
+            "./css/all.css",
+            "./css/bootstrap.min.css"
+        ]
+    },
+    "main":{
+        "botton":[
+            {
+                "name":"sintomas",
+                "icon":{
+                    "img":"./icons/icon1.svg"
+                }
+            },{
+                "name":"info_oficial",
+                "icon":{
+                    "img":"./icons/icon2.svg"
+                }
+            },{
+                "name":"comunicar",
+                "icon":{
+                    "img":"./icons/icon3.svg"
+                }
+            },{
+                "name":"atencion",
+                "icon":{
+                    "img":"./icons/icon4.svg"
+                }
+            },{
+                "name":"about",
+                "icon":{
+                    "style":"fas fa-bars",
+                    "accions":[
+                        {
+                            "name":"close",
+                            "require":{
+                                "style":"fas fa-close"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "menu":[
+            {
+                "name":"Menu",
+                "btn":{"id":"about"},
+                "content":{
+                    "title":{
+                        "content":"About US",
+                        "style":"title"
+                    },
+                    "subtitle":{
+                        "content":"Infomacion de la aplicacion"
+                    },
+                    "list":[
+                        "asdaoisjdijaiosjdjajsiodjiojasiojdiojsajdijosajido",
+                        "ahusdhuihasuhidhuasdhuiahsuidhuhaushudihiusahduas",
+                        "asdyhiuahsudhiuashuidhiuhasuidahisudhiuashidhuiashdi",
+                        "asuhduihauhidhuahusidhuaishuidhiusahdhiahudihuas",
+                        "hausidhuiahushduiashudhuiahsidhiahushdiuasdasdasd",
+                        "uahsuidhaiushudhahsudhuiahsudhuahsiudhuuhsahdihaisduh",
+                        "aijsdjiaosjdijioasjdiasojdojaioj"
+                    ]
+                }
+            },
+            {
+                "name":"SINTOMAS DEL COVID-19",
+                "btn":{"id":"sintomas"},
+                "content":{
+                    "title":{
+                        "content":"Sintomas del covid-19",
+                        "style":"title"
+                    },
+                    "list":[
+                        {
+                            "title":"Estadisticas"
+                        },
+                        "El COVID-19 se caracteriza por síntomas leves, como, dolor de garganta, tos y fiebre. La enfermedad puede ser más grave en algunas personas y provocar neumonía o dificultades respiratorias.","Más raramente puede ser mortal. Las personas de edad avanzada y las personas con otras afecciones médicas (como asma, diabetes o cardiopatías) pueden ser más vulnerables y enfermar de gravedad.",
+                        {
+                            "list":{
+                                "title":"Los signos y síntomas pueden ser:",
+                                "list":[
+                                    "dolor de garganta",
+                                    "tos",
+                                    "fiebre",
+                                    "dificultad para respirar (en casos graves)"
+                                ],
+                                "footer":"Actualmente no existe vacuna para prevenir la COVID-19."
+                            }
+                        },
+                        {
+                            "list":{
+                                "title":"Puede reducir el riesgo de infección:",
+                                "list":[
+                                    "Lavándose las manos regularmente con agua y jabón o con desinfectante de manos a base de alcohol",
+                                    "Cubriéndose la nariz y la boca al toser y estornudar con un pañuelo de papel desechable o con la parte interna del codo",
+                                    "Evitando el contacto directo (1 metro o 3 pies) con cualquier persona con síntomas de resfriado o gripe (influenza)"
+                                ],
+                                "footer":"No existe ningún medicamento para prevenir o tratar la COVID-19. Algunos pacientes pueden necesitar tratamiento sintomático que les ayude a respirar."
+                            }
+                        },
+                        {
+                            "title":"Cuidado personal"
+                        },
+                        {
+                            "list":{
+                                "title":"Si presenta síntomas leves, quédese en casa hasta recuperarse. Puede aliviar sus síntomas:",
+                                "list":[
+                                    "descansando y durmiendo",
+                                    "manteniéndose caliente",
+                                    "bebiendo muchos líquidos",
+                                    "utilizando humidificadores o tomando duchas calientes para aliviar el dolor de garganta y la tos"
+                                ]
+                            }
+                        },
+                        {
+                            "title":"Tratamientos médicos"
+                        },
+                        "Si presenta fiebre, tos y dificultad para respirar, busque inmediatamente atención médica. Llame con antelación a su proveedor de atención de salud e indíquele si recientemente ha o estado en contacto con personas que hayan viajado",
+                        {
+                            "link":{
+                                "title":"Link de paginas de noticias sobre el coronavirus",
+                                "list":[
+                                    "https://clustersalud.americaeconomia.com/gestion-hospitalaria/omo-se-trata-un-paciente-con-coronavirus-en-un-centro-de-salud",
+                                    "https://www.google.com/amp/s/amp.milenio.com/ciencia-y-salud/coronavirus-sintomas-inflamacion-en-ninos-asintomaticos",
+                                    "https://www.google.com/amp/s/cnnespanol.cnn.com/2020/04/09/alergias-y-coronavirus-lo-que-debes-hacer-para-proteger-tus-pulmones/amp/",
+                                    "https://www.google.com/amp/s/www.elimparcial.com/amp/",
+                                    "https://www.google.com/amp/s/www.elimparcial.com/amp/mexicali/mexicali/Sintomas-de-Covid-19-en-bebes-20200410-0017.html",
+                                    "https://www.google.com/amp/s/heraldodemexico.com.mx/estados/coronavirus-jalisco-centro-comercial-panico-casos-sintomas/",
+                                    "https://www.google.com/amp/s/www.multimedios.com/television/sin-sintomas-la-mayoria-de-los-contagiados-por-coronavirus%3famp",
+                                    "https://www.google.com/amp/s/amp.milenio.com/internacional/coronavirus-rechazan-mayores-edad-hospitales-madrid"
+                                ]
+                            }
+                        },
+                        {
+                            "link":{
+                                "title":"Link de la pagina de la OMS",
+                                "list":[
+                                    "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports",
+                                    "https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/advice-for-public/q-a-coronaviruses",
+                                    "https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/technical-guidance"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name":"INFORMACION OFICIAL",
+                "btn":{"id":"info_oficial"},
+                "content":{
+                    "title":{
+                        "content":"Informacion Oficial"
+                    },
+                    "subtitle":{
+                        "content":"noticias"
+                    }
+                },
+                "component":{
+                    "name":"noticias"
+                }
+            },
+            {
+                "name":"COMUNICADOS",
+                "btn":{"id":"comunicar"},
+                "content":{
+                    "list":[
+                        {"image":{
+                            "url":"./img/1.jpeg",
+                            "style":"box"
+                        }},
+                        {"image":{
+                            "url":"./img/2.jpeg",
+                            "style":"box"
+                        }},
+                        {"image":{
+                            "url":"./img/3.jpeg",
+                            "style":"box"
+                        }},
+                        {"image":{
+                            "url":"./img/4.jpeg",
+                            "style":"box"
+                        }},
+                        {"image":{
+                            "url":"./img/5.jpeg",
+                            "style":"box"
+                        }}
+                    ]
+                }
+            },
+            {
+                "name":"CENTROS DE ATENCION",
+                "btn":{"id":"atencion"},
+                "content":{
+                    "title":{
+                        "content":"Los Telefonos de asesoria COVID-19"
+                    },
+                    "list":[
+                        {"title":"Los Telefonos de asesoria COVID-19"},
+                        {"phone":{
+                            "title":"Aguascalientes",
+                            "list":["449 910 7900 Ext. 7133"]
+                        }},
+                        {"phone":{
+                            "title":"Baja California",
+                            "list":["686 304 8048","664 108 2528","646 239 0955","646 947 5408"]
+                        }},
+                        {"phone":{
+                            "title":"Baja California Sur",
+                            "list":["612 199 5386","624 228 6855"]
+                        }},{
+                            "phone":{
+                                "title":"Campeche",
+                                "list":[
+                                    "911"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Coachuila",
+                                "list":[
+                                    "911"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Colima",
+                                "list":[
+                                    "800 337 2583",
+                                    "800 DE SALUD"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Chiapas",
+                                "list":[
+                                    "800 772 2020",
+                                    "961 607 7674"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Chihuahua",
+                                "list":[
+                                    "614 4293 300 Ext. 10004",
+                                    "911"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Cuidad de Mexico",
+                                "list":["555 658 1111"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Durango",
+                                "list":[
+                                    "618 137 7306",
+                                    "618 325 1573",
+                                    "618 134 7042"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Guanajuato",
+                                "list":[
+                                    "800 627 2583",
+                                    "911"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Guerrero",
+                                "list":["747 47 118 63"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Hidalgo",
+                                "list":["771 719 4500"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Jalisco",
+                                "list":["333 823 3220"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Estado de México",
+                                "list":["800 900 3200"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Michoacán",
+                                "list":["800 123 2890"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Morelos",
+                                "list":["777 314  3336"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Nayarit",
+                                "list":[
+                                    "311 217 9556",
+                                    "911"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Nuevo Leon",
+                                "list":[
+                                    "818 361 0058",
+                                    "070",
+                                    "911"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Oaxaca",
+                                "list":[
+                                    "951 516 1220",
+                                    "951 516 8242"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Puebla",
+                                "list":[
+                                    "800 420 5782",
+                                    "911"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Querétaro",
+                                "list":["800 004 480"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Quintana Roo",
+                                "list":["800 832 9198"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"San Luis Potosí",
+                                "list":["800 123 8888"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Sinaloa",
+                                "list":["667 713 0063"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Sonora",
+                                "list":["662 216 2759"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Tabasco",
+                                "list":["800 624 1774"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Tamaulipas",
+                                "list":[
+                                    "834 318 6320",
+                                    "834 318 6321"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Veracruz",
+                                "list":["800 123 456"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Yucatán",
+                                "list":[
+                                    "999 9303 050 Ext. 45042",
+                                    "911"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Zacatecas",
+                                "list":[
+                                    "800 YO SALUD"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Tlaxcala",
+                                "list":[
+                                    "551 944 2500 Ext. 891 29 401",
+                                    "551 944 2500 Ext. 891 29 408",
+                                    "911"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Cuerpo de Bomberos",
+                                "list":[
+                                    "(81) 8342-0053",
+                                    "(81) 8342-0054",
+                                    "(81) 8342-0055"
+                                ]
+                            }
+                        },{
+                            "title":"Ambulancias"
+                        },{
+                            "phone":{
+                                "title":"Cruz Roja",
+                                "list":[
+                                    "065",
+                                    "(81) 1233-0600"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Cruz Verde",
+                                "list":["(81) 8371-5050"]
+                            }
+                        },{
+                            "title":"Clinicas y hospitales"
+                        },{
+                            "phone":{
+                                "title":"Centros de Informacion Toxicologica",
+                                "list":[	
+                                    "(81) 8348-6936",
+                                    "(81) 8348-6883"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Hospital Metropolitano",
+                                "list":[
+                                    "(81) 8305-5900",
+                                    "(81) 8305-5901",
+                                    "(81) 8305-5902",
+                                    "(81) 8305-5903",
+                                    "(81) 8305-5904"
+                                ]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Hospital Universitario Dr. José Eleuterio González",
+                                "list":["(81) 8389-1111"]
+                            }
+                        },{
+                            "phone":{
+                                "title":"Hospital de Zona Traumatología y Ortopedia No. 21 IMSS",
+                                "list":["(81) 8150-3190"]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
