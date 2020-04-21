@@ -1,6 +1,6 @@
-import App from "./v1/App.svelte";
+// import App from "./v1/App.svelte";
 import RS from "./RunService.v2";
-import db from "./v2/db";
+// import db from "./v2/db";
 // let rs = new RS([
 //     "./json/base.json",
 //     "./json/myinfo.json"
@@ -19,7 +19,7 @@ import db from "./v2/db";
 //     local().setItem("json",JSON.stringify(a))
 // });
 let rs = new RS({require:["./json/base.json","./json/myinfo.json"],serviceWorker:"./sw.js"});
-rs.get((a,b)=>{
-    console.log(rs.db(a[0],a[1]))
+rs.get().then(a=>{
+    console.log(a);
 })
 export default app;

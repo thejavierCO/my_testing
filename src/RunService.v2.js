@@ -2,16 +2,30 @@ import tools from "./tools";
 class rs extends tools{
     constructor(a){
         super(a);
-        this.data = [];
-        const {gettype,getkeys,getfile,w} = this.getMethods();
+        this.req = [];
+        this.sw = [];
+        const {gettype,getkeys,getfile,w,ct} = this.getMethods();
         if(gettype(a)==="key"){
             getkeys(a).map(e=>{
                 switch(e){
                     case "require":
-                        this.req = a[e];
+                        if(gettype(a[e])==="list"){
+                            this.reqB = a[e].length;
+                            getkeys(a[e]).map(e=>{
+                            if(gettype(e)==="string"){
+                            getfile(e).then(async e=>this.req.push(await e.json()))
+                            }else{w(e);}
+                            })
+                        }else{
+                            w(a[e]);
+                        }
                     break;
                     case "serviceWorker":
-                        this.sw = a[e];
+                        if(gettype(a[e])==="string"){
+                            this.sw = a[e];
+                        }else{
+                            w(a[e]);
+                        }
                     break;
                     default:
                         w(a);
@@ -21,35 +35,14 @@ class rs extends tools{
             w(a);
         }
     }
-    async db(base,require){
-        console.log(await base, await require);
-    }
-    get(f){
-        let data = [];
-        const {ct,getfile} = this.getMethods();
-        getfile(this.req).then(async a=>{
-            return a.map(async e=>{
-                let i = await e;
-                if(ct()){ct().open("require_info").then(f=>{
-                    console.log(i.json());
-                })}
-                data.push(i);
-            })
+    state(a=false){const {gettype,w,sw,delsw} = this.getMethods();return a?(gettype(a)=="string"?(sw()?(a==="run"?sw(this.sw):a==="del"?delsw():w(false)):sw()):gettype(a)):w("require run or del")}
+    get(a=100){
+        return new Promise((res,rec)=>{
+            let i = 0;
+            let time = setInterval(()=>{i++;
+                if(this.req.length===this.reqB){res(this.req);clearInterval(time);}else if(i>a){rec(null);clearInterval(time);}
+            });
         })
-        let t = setInterval(()=>{
-            if(this.req.length===data.length){
-                if(f){f(data,this.getMethods())}
-                clearInterval(t);
-            }
-        })
-    }
-    Run(){
-        let { sw } = this.getMethods();
-        sw(this.sw);
-    }
-    del(){
-        let { delsw } = this.getMethods();
-        delsw();
     }
 }
 export default rs;
