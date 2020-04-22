@@ -19,7 +19,13 @@ import RS from "./RunService.v2";
 //     local().setItem("json",JSON.stringify(a))
 // });
 let rs = new RS({require:["./json/base.json","./json/myinfo.json"],serviceWorker:"./sw.js"});
+rs.state("del");
 rs.get().then(a=>{
-    console.log(a);
-})
+    let { gen } = rs.getMethods();
+    let info = new gen(a);
+    console.log(info.setFormat("document"));
+    console.log(info.setFormat("main"));
+}).catch(a=>{
+    console.warn(a);
+});
 export default app;
