@@ -13,17 +13,6 @@ if(m.botton&&m.menu){
     botton = m.btn[0];
     content = m.menu[0];
 }
-let rs = new RS();
-// let {gettype,getkeys} = rs.getMethods();
-// if(gettype(botton)==="list"){
-//     let btnMenu = botton.find((a)=>a[1]==="about"||a[1]==="menu");
-//     if(btnMenu){
-//         btnMenu[0].addEventListener("click",()=>{
-//             console.log();
-//         })
-//         btnM = btnMenu;
-//     }
-// }
 </script>
 {#if botton&&content}
     <main class="content">
