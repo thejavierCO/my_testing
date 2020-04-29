@@ -2,54 +2,22 @@
     background:$bg;
     color:$text;
 }
+@mixin grid($row,$col){
+    display:grid;
+    grid-template-columns:repeat(auto,$col);
+    grid-template-rows:repeat(auto,$row);
+}
+@mixin boton(){
+    &:hover{
+        opacity:50%;
+    }
+    &:active{
+        opacity:100%;
+    }
+}
 .app{
     @include app(#000,#fff);
 }
-/* .main{
-    background:#fff;
-    color:#000;
-    height: 100vh;
-    overflow: auto;
-}
-.app-content{
-    display:grid;
-    grid-template-columns: repeat(1,auto);
-    grid-template-rows: 60px auto 1fr;
-    width: auto;
-    height: 100vh;
-    overflow:auto;
-}
-.navbar{
-    font-size: 25px;
-    grid-column: 1/-1;
-}
-.navbar > div:hover{
-    cursor: pointer;
-    opacity: 50%;
-    transition-duration: 300ms;
-}
-.navbar > div:active{
-    opacity: 100%;
-}
-div.btn-body > div > img:hover{
-    opacity: 50%;
-    transition-duration: 300ms;
-}
-div.btn-body > div > img:active{
-    opacity: 100%;
-    transition-duration: 100ms;
-}
-div.menu-btn{
-    display: grid;
-    grid-template-columns:repeat(2,auto);
-    grid-template-rows:repeat(2,auto);
-    overflow:auto;
-    padding: 10px;
-}
-div.menu-btn > div{
-    margin:10px;
-} */
-/* other css*/
 div#load{
     background: #fff;
     color:#000;
@@ -145,9 +113,6 @@ a.item:hover{
     color:#fff;
     text-decoration: none;
 }
-#boton:hover{
-    opacity: 50%;
-}
-#boton:active{
-    opacity: 100%;
+#boton{
+    @include boton();
 }
