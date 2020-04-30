@@ -12,7 +12,8 @@ class tools{
             gettype:(a)=>{try{return a?typeof a==="object"?a.length?"list":"key":typeof a:"";}catch(e){console.warn([e],a);}},
             createTag:(a)=>document.createElement(a),
             w:(a)=>console.warn(a),
-            gen:json_parser
+            gen:json_parser,
+            html_parser
         }
     }
 }
@@ -183,5 +184,184 @@ class json_parser extends tools{
             }
         }
     }
+}
+class html_parser extends tools{
+    constructor(a){
+        super(a);
+        let {botton,menu} = a;
+        if(botton&&menu){
+            this.data = a;
+        }
+    }
+    getcontent(event){
+        const {gettype,getkeys,createTag,w} = this.getMethods();
+        let data = this.data;
+        if(data){
+            let {botton,menu} = data;
+            if(gettype(botton)==="list"&&gettype(menu)==="list"){
+                let content = getkeys(menu).map(e=>{
+                    let {btn} = e;
+                    getkeys(botton).map(f=>{if(f.name===btn.id){e.btn = f;}})
+                    return e;
+                });
+                console.log(getkeys(content).map((e,n)=>{
+                    return getkeys(e).map(f=>{
+                        if(gettype(e[f])==="string"){
+                            let div = createTag("div");
+                            let title = createTag("h2");
+                            title.innerHTML = e[f];
+                            title.setAttribute("class","title");
+                            div.setAttribute("class","M");
+                            div.setAttribute("id","Menu"+n);
+                            div.appendChild(title);
+                            return div;
+                        }else if(gettype(e[f])==="key"){
+                            let div = createTag("div");
+                            if(f==="btn"){
+                                if(gettype(e[f])==="key"){
+                                    getkeys(e[f]).map(g=>{
+                                        let item = e[f];
+                                        if(g==="name"){
+                                            div.setAttribute("id",item[g]);
+                                        }
+                                        if(g==="icon"){
+                                            let {style,img,image,accions} = item[g];
+                                            if(style||img||image){
+                                                let i = false,imgTag = false;
+                                                if(style&&gettype(style)==="string"){
+                                                    i = createTag("i");
+                                                    i.setAttribute("class",style);
+                                                }else if(img||image){
+                                                    imgTag = createTag("img");
+                                                    let src = img?gettype(img)==="string"?img:w("require string",img):image?gettpe(image)==="string"?image:w("require string",image):w("require src");
+                                                    imgTag.setAttribute("src",src);
+                                                }
+                                                let tag = i?i:imgTag?imgTag:w("require tag");
+                                                tag.onclick = event?event:()=>{w("require event in getcontent")};
+                                                div.appendChild(tag);
+                                            }
+                                            if(accions){
+                                                console.warn(accions);
+                                            }
+                                        }
+                                    })
+                                }
+                            }else if(f==="content"){
+                                console.log(this.setTitle(e[f]),f);
+                            }
+                            return div;
+                        }else{
+                            console.warn(e[f]);
+                            return e[f];
+                        }
+                    })
+                }))
+            }
+        }
+    }
+    setTitle(a){
+        const { gettype , getkeys , w , createTag} = this.getMethods();
+        const {title, subtitle, list} = a;
+        let div = createTag("div");
+        if(title){
+            let { content , style} = title;
+            let t = createTag("span");
+            t.setAttribute("class",style?style:"t");
+            t.innerHTML = content;
+            div.appendChild(t);
+        }
+        if(subtitle){
+            let { content , style} = subtitle;
+            let st = createTag("span");
+            st.setAttribute("class",style?style:"st");
+            st.innerHTML = content;
+            div.appendChild(st);
+        }
+        if(list){
+            console.log(this.setList(list),"result list");
+        }
+        return div;
+    }
+    setList(a){
+        const { gettype, getkeys ,w , createTag} = this.getMethods();
+        if(gettype(a)==="list"){
+            return getkeys(a).map(e=>{
+                console.log(this.setList(e),"result");
+                return e;
+            })
+        }else if(gettype(a)==="key"){
+            let {title,subtitle,text,list,link,image,phone,footer} = a;
+            if(title){
+                if(gettype(title)==="string"){
+                    let div = createTag("div");
+                    div.setAttribute("class","title");
+                    div.innerHTML = title;
+                    return div
+                }
+            }else if(subtitle){
+                if(gettype(subtitle)==="string"){
+                    let div = createTag("div");
+                    div.setAttribute("class","subtitle");
+                    div.innerHTML = subtitle;
+                    return div
+                }
+            }else if(text){
+                if(gettype(text)==="string"){
+                    let div = createTag("span");
+                    div.setAttribute("class","text");
+                    div.innerHTML = text;
+                    return div
+                }
+            }else if(list){
+                if(gettype(list)==="key"){
+                    let div = createTag("div");
+                    div.setAttribute("class","list");
+                    let {title,footer} = list;
+                    list = list.list;
+                    if(title){
+                        div.appendChild(this.setList({title}));
+                    }
+                    if(list){
+                        let l = createTag("ul");
+                        l.setAttribute("class","list");
+                        getkeys(this.setList({list})).map(e=>{
+                            let u = createTag("li");
+                            u.setAttribute("class","item");
+                            u.appendChild(e);
+                            l.appendChild(u);
+                        })
+                        div.appendChild(l);
+                    }
+                    if(footer){
+                        div.appendChild(this.setList({title}));
+                    }
+                    return div;
+                }else if(gettype(list)==="list"){
+                    return getkeys(list).map(e=>{
+                        return this.setList(e);
+                    })
+                }else{
+                    console.warn(list);
+                }
+            }else if(link){
+                console.log(link);
+            }else if(image){
+                console.log(image);
+            }else if(phone){
+                console.log(phone);
+            }else if(footer){
+                if(gettype(footer)==="string"){
+                    let div = createTag("span");
+                    div.setAttribute("class","footer");
+                    div.innerHTML = footer;
+                    return div
+                }
+            }else{console.warn(a)}
+        }else{
+            console.warn(a);
+        }
+    }
+    getboton(){}
+    getmenu(){}
 }
 export default tools;
