@@ -1,22 +1,18 @@
-import App from "./v2/App.svelte";
-import RS from "./RunService.v2";
-let rs = new RS({require:["./json/base.json","./json/myinfo.json"],serviceWorker:"./sw.js"});
-rs.state("del");
-rs.get().then(a=>{
-    let { gen } = rs.getMethods();
-    let info = new gen(a);
-    rs.setDoc(info.setFormat("document")).then(e=>{
-        new App({
-            target:document.body,
-            props:{
-                menu:info.setFormat("main")
-            }
-        });
-        return e;
-    }).catch(a=>{
-        console.warn(a);
-    })
-}).catch(a=>{
-    console.warn(a);
+// import App from "./v3/App.svelte";
+import RS from "./RunService.v3";
+const rs = new RS({
+    require:["./json/base.json","./json/myinfo.json"],
+    serviceWorker:"./js/sw.js"
 });
+let { data , sw , methods } = rs;
+sw().then(e=>e).catch(e=>e)
+.then(sw=>data().then(data=>({"files":data,sw})).catch(data=>({"files":data,sw})))
+.then(result=>{
+    let {db} = methods;
+    let {data} = result.files;
+    let info = new db(data);
+    console.log(info.get(),info.get("main"),info.get("document"));
+}).catch(e=>{
+    console.warn(e);
+})
 export default app;

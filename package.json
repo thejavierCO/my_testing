@@ -6,7 +6,8 @@
     "deploy":"firebase deploy",
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "style":"sass ./src/style/global.scss ./public/global.css --watch"
+    "style":"sass ./src/style/global.scss ./public/global.css --watch",
+    "analyzer":"source-map-explorer public/build/bundle.js --html tree.html"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
