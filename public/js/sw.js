@@ -19,9 +19,9 @@ function offline_app(a){
 self.addEventListener('fetch',(a)=>{
     a.respondWith(offline_app(a));
 });
-self.addEventListener('sync',(a)=>{
-    console.log(a);
+self.addEventListener('sync',(b)=>{
+    console.log(b);
 });
-self.addEventListener('active',(a)=>{
-    console.log(a);
+self.addEventListener('active',(c)=>{
+    console.log(c);
 });
